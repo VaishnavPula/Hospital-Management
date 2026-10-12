@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Doctors</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+    <button id="menu-button" class="menu-button" aria-label="Open menu" aria-expanded="true">☰</button>
+    <a class="brand" href="/">🏥 <span>CityCare Hospital</span></a>
+    <button id="theme-button" class="theme-button" aria-label="Toggle theme">🌙</button>
+</header>
+
+<aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-title">Menu</div>
+        <button id="close-sidebar" class="close-sidebar" aria-label="Close menu">×</button>
+    </div>
+    <nav class="sidebar-nav">
+        <a href="/" data-page="home"><span>⌂</span> Home</a>
+        <a href="/patients.html" data-page="patients"><span>♙</span> Patients</a>
+        <a href="/doctors.html" data-page="doctors"><span>⚕</span> Doctors</a>
+        <a href="/appointments.html" data-page="appointments"><span>◷</span> Appointments</a>
+        <a href="/billing.html" data-page="billing"><span>▣</span> Billing</a>
+    </nav>
+</aside>
+<div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+<main>
+<div class="page-title">
+    <h1>Doctors</h1>
+    <a class="button" href="/add_doctor.html">+ Add Doctor</a>
+</div>
+
+<form class="search" id="doctor-search-form">
+    <input id="doctor-search" placeholder="Search doctor...">
+    <button type="submit">Search</button>
+</form>
+
+<table>
+<tr>
+    <th>ID</th><th>Name</th><th>Specialization</th>
+    <th>Phone</th><th>Email</th><th>Available Time</th><th>Actions</th>
+</tr>
+<tbody id="doctors-table"></tbody>
+</table>
+</main>
+<script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Patient</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+    <button id="menu-button" class="menu-button" aria-label="Open menu" aria-expanded="true">☰</button>
+    <a class="brand" href="/">🏥 <span>CityCare Hospital</span></a>
+    <button id="theme-button" class="theme-button" aria-label="Toggle theme">🌙</button>
+</header>
+
+<aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-title">Menu</div>
+        <button id="close-sidebar" class="close-sidebar" aria-label="Close menu">×</button>
+    </div>
+    <nav class="sidebar-nav">
+        <a href="/" data-page="home"><span>⌂</span> Home</a>
+        <a href="/patients.html" data-page="patients"><span>♙</span> Patients</a>
+        <a href="/doctors.html" data-page="doctors"><span>⚕</span> Doctors</a>
+        <a href="/appointments.html" data-page="appointments"><span>◷</span> Appointments</a>
+        <a href="/billing.html" data-page="billing"><span>▣</span> Billing</a>
+    </nav>
+</aside>
+<div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+<main>
+<h1 id="patient-form-title">Add Patient</h1>
+<form class="form" id="patient-form">
+    <label>Name</label>
+    <input id="name" required>
+
+    <label>Age</label>
+    <input id="age" type="number" required>
+
+    <label>Gender</label>
+    <select id="gender" required>
+        <option value="">Select gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select>
+
+    <label>Phone</label>
+    <input id="phone" required>
+
+    <label>Email</label>
+    <input id="email" type="email">
+
+    <label>Address</label>
+    <textarea id="address"></textarea>
+
+    <label>Blood Group</label>
+    <select id="blood_group" required>
+        <option value="">Select blood group</option>
+        <option>A+</option><option>A-</option>
+        <option>B+</option><option>B-</option>
+        <option>AB+</option><option>AB-</option>
+        <option>O+</option><option>O-</option>
+    </select>
+
+    <button class="button" type="submit">Save Patient</button>
+</form>
+<p id="form-message"></p>
+</main>
+<script src="/static/script.js"></script>
+</body>
+</html>

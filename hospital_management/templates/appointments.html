@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+    <button id="menu-button" class="menu-button" aria-label="Open menu" aria-expanded="true">☰</button>
+    <a class="brand" href="/">🏥 <span>CityCare Hospital</span></a>
+    <button id="theme-button" class="theme-button" aria-label="Toggle theme">🌙</button>
+</header>
+
+<aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-title">Menu</div>
+        <button id="close-sidebar" class="close-sidebar" aria-label="Close menu">×</button>
+    </div>
+    <nav class="sidebar-nav">
+        <a href="/" data-page="home"><span>⌂</span> Home</a>
+        <a href="/patients.html" data-page="patients"><span>♙</span> Patients</a>
+        <a href="/doctors.html" data-page="doctors"><span>⚕</span> Doctors</a>
+        <a href="/appointments.html" data-page="appointments"><span>◷</span> Appointments</a>
+        <a href="/billing.html" data-page="billing"><span>▣</span> Billing</a>
+    </nav>
+</aside>
+<div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+<main>
+<div class="page-title">
+    <h1>Appointments</h1>
+    <a class="button" href="/add_appointment.html">+ Add Appointment</a>
+</div>
+
+<table>
+<tr>
+    <th>Patient</th><th>Doctor</th><th>Date</th><th>Time</th>
+    <th>Reason</th><th>Status</th><th>Actions</th>
+</tr>
+<tbody id="appointments-table"></tbody>
+</table>
+</main>
+<script src="/static/script.js"></script>
+</body>
+</html>

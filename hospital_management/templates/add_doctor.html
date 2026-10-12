@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Doctor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+    <button id="menu-button" class="menu-button" aria-label="Open menu" aria-expanded="true">☰</button>
+    <a class="brand" href="/">🏥 <span>CityCare Hospital</span></a>
+    <button id="theme-button" class="theme-button" aria-label="Toggle theme">🌙</button>
+</header>
+
+<aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-title">Menu</div>
+        <button id="close-sidebar" class="close-sidebar" aria-label="Close menu">×</button>
+    </div>
+    <nav class="sidebar-nav">
+        <a href="/" data-page="home"><span>⌂</span> Home</a>
+        <a href="/patients.html" data-page="patients"><span>♙</span> Patients</a>
+        <a href="/doctors.html" data-page="doctors"><span>⚕</span> Doctors</a>
+        <a href="/appointments.html" data-page="appointments"><span>◷</span> Appointments</a>
+        <a href="/billing.html" data-page="billing"><span>▣</span> Billing</a>
+    </nav>
+</aside>
+<div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+<main>
+<h1 id="doctor-form-title">Add Doctor</h1>
+<form class="form" id="doctor-form">
+    <label>Name</label>
+    <input id="name" required>
+
+    <label>Specialization</label>
+    <input id="specialization" required>
+
+    <label>Phone</label>
+    <input id="phone" required>
+
+    <label>Email</label>
+    <input id="email" type="email">
+
+    <label>Available Time</label>
+    <input id="available_time" placeholder="10:00 AM - 2:00 PM" required>
+
+    <button class="button" type="submit">Save Doctor</button>
+</form>
+<p id="form-message"></p>
+</main>
+<script src="/static/script.js"></script>
+</body>
+</html>
