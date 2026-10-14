@@ -92,7 +92,6 @@ The HTML files are standard HTML files and do not use Jinja template syntax.
 
 The application uses Flask for backend operations and SQLite for database management.
 
-The `.env` file should not be uploaded to GitHub because it may contain sensitive configuration information.
 
 ## 👨‍💻 Author
 
